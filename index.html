@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type ="text/javascript" src = "index.js" ></script>
     <title>Web-app</title>
 </head>
 <body>
@@ -32,15 +34,21 @@
             </p>
         </div>
     -->
-    <input type="text" id="user" required="required"><br>
-    <button type="button" onclick="getdata();">Get</button>
+    
+    <!--
+        <input type="text" id="user" required="required"><br>
+        <button type="button" onclick="getdata();">Get</button>-->
     <div class = "data" id= "main-data">
         <div class = "items">
-            <h3>Product details:</h3>
-            <p id = "name">Product name:</p>
+            <table>
+                <tbody id="content">
+            <h3>Product details:</h3>            
             <p id= "category">Product category:</p>
             <p id = "description">Product description:</p>
+            <p id = "name">Product name:</p>
             <p id= "price">Product price:</p>
+                </tbody>
+            </table>
         </div>
 
     </div>
@@ -56,8 +64,6 @@
 </div>
 </div>
 
-
-
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
 
@@ -69,18 +75,19 @@
   // Your web app's Firebase configuration
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   var firebaseConfig = {
-    apiKey: "AIzaSyADypVlzkfhyLxnApIV2KWnzgW2ho-LuHc",
-    authDomain: "smth-fab09.firebaseapp.com",
-    projectId: "smth-fab09",
-    storageBucket: "smth-fab09.appspot.com",
-    messagingSenderId: "574281756843",
-    appId: "1:574281756843:web:349241ee8e5a787f9007ee",
-    measurementId: "G-0HKJBR805R"
+    apiKey: "AIzaSyAqhMOuHEhA6CjxmYL9STf8_xhXSj3RIak",
+    authDomain: "qrcode-sam.firebaseapp.com",
+    databaseURL: "https://qrcode-sam-default-rtdb.firebaseio.com",
+    projectId: "qrcode-sam",
+    storageBucket: "qrcode-sam.appspot.com",
+    messagingSenderId: "778655685266",
+    appId: "1:778655685266:web:e1659e7812b531ec11a44b",
+    measurementId: "G-83GQBEE0PH"
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 </script>
-<script type ="text/javascript" src = "index.js" ></script>
+
 </body>
 </html>

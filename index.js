@@ -15,6 +15,7 @@ db.collection("Products")
     });
   });
   */
+  /*
  function getdata() {
    var Products = document.getElementById("main-data").value;
    //firebase data retrieval function
@@ -37,7 +38,86 @@ db.collection("Products")
 
        document.getElementById("name").innerHTML = name ;
        document.getElementById("category").innerHTML = category;
-       document.getElementById("desc").innerHTML = desc;
+       document.getElementById("description").innerHTML = desc;
        document.getElementById("price").innerHTML = price;
      });
  }
+ */
+/*
+ var firebaseRef = new Firebase("http://INSTANCE.firebaseio.com");
+ firebaseRef.child(".info/connected").on("value", function (connectedSnap) {
+   if (connectedSnap.val() === true) {
+     document.getElementById("content").innerHTML= "we're connected!"
+   } else {
+     "we're disconnected!"
+   }
+ });
+
+
+  var rootRef = firebase.database().ref().child("Products");
+  rootRef.on("child_added", snap => {
+           var name = snap.child("product_name").val();
+           var category = snap.child("product_category").val();
+           var desc = snap.child("product_desc").val();
+           var price = snap.child("product_price").val();
+
+           $("#content").append("<tr><td>"+ name +"</td><td>"+ category + "</td><td>"+ desc +"</td><td>" + price + "</td></tr>");
+
+            document.getElementById("category").innerHTML = category;
+            document.getElementById("description").innerHTML = desc;
+            document.getElementById("name").innerHTML = name;
+            document.getElementById("price").innerHTML = price;
+  });
+*/
+function setup(){
+const config = {
+  apiKey: "AIzaSyAqhMOuHEhA6CjxmYL9STf8_xhXSj3RIak",
+  authDomain: "qrcode-sam.firebaseapp.com",
+  databaseURL: "https://qrcode-sam-default-rtdb.firebaseio.com",
+  projectId: "qrcode-sam",
+  storageBucket: "qrcode-sam.appspot.com",
+  messagingSenderId: "778655685266",
+  appId: "1:778655685266:web:e1659e7812b531ec11a44b",
+  measurementId: "G-83GQBEE0PH",
+};
+  firebase.initializeApp(config);
+  database = firebase.database();
+
+  loadFirebase();
+}
+function loadFirebase() {
+  var ref = database.ref("fruits");
+  ref.on("value", gotData, errData);
+}
+
+function errData(error) {
+  console.log("Something went wrong.");
+  console.log(error);
+}
+
+// The data comes back as an object
+function gotData(data) {
+  var fruits = data.val();
+  // Grab all the keys to iterate over the object
+  var keys = Object.keys(fruits);
+  clearList();
+
+  // Make an HTML list
+  var list = createElement('ol');
+  list.parent('content');
+
+  // Loop through array
+  for (var i = 0; i < keys.length; i++) {
+    var key = keys[i];
+    var fruit = fruits[key];
+    var li = createElement('li', fruitt + ': ' + fruit.total + ", key: " + key);
+    li.parent(list);
+    listItems.push(li);
+  }
+}
+// Clear everything
+function clearList() {
+  for (var i = 0; i < listItems.length; i++) {
+    listItems[i].remove();
+  }
+}
