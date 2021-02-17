@@ -83,41 +83,4 @@ const config = {
   firebase.initializeApp(config);
   database = firebase.database();
 
-  loadFirebase();
-}
-function loadFirebase() {
-  var ref = database.ref("fruits");
-  ref.on("value", gotData, errData);
-}
-
-function errData(error) {
-  console.log("Something went wrong.");
-  console.log(error);
-}
-
-// The data comes back as an object
-function gotData(data) {
-  var fruits = data.val();
-  // Grab all the keys to iterate over the object
-  var keys = Object.keys(fruits);
-  clearList();
-
-  // Make an HTML list
-  var list = createElement('ol');
-  list.parent('content');
-
-  // Loop through array
-  for (var i = 0; i < keys.length; i++) {
-    var key = keys[i];
-    var fruit = fruits[key];
-    var li = createElement('li', fruitt + ': ' + fruit.total + ", key: " + key);
-    li.parent(list);
-    listItems.push(li);
-  }
-}
-// Clear everything
-function clearList() {
-  for (var i = 0; i < listItems.length; i++) {
-    listItems[i].remove();
-  }
 }
