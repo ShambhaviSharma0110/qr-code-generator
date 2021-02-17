@@ -44,15 +44,6 @@ db.collection("Products")
  }
  */
 /*
- var firebaseRef = new Firebase("http://INSTANCE.firebaseio.com");
- firebaseRef.child(".info/connected").on("value", function (connectedSnap) {
-   if (connectedSnap.val() === true) {
-     document.getElementById("content").innerHTML= "we're connected!"
-   } else {
-     "we're disconnected!"
-   }
- });
-
 
   var rootRef = firebase.database().ref().child("Products");
   rootRef.on("child_added", snap => {
