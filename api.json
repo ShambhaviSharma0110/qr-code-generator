@@ -1,0 +1,71 @@
+{
+    "Products":[{
+"id":"ab01",
+"product_category": "electronics",
+"product_desc": "mobile phone by apple with latest features",
+"product_name": "iphone",
+"product_price": 60000
+},
+{
+"id": "ab02",
+"product_category":"clothing & accessories",
+"product_desc":"cotton t-shirt with half sleeves",
+"product_name": "T-shirt",
+"product_price": 700
+},
+{
+"id":"ab03",
+"product_category":"electronics",
+"product_desc": "Laptop by Apple has the latest features",
+"product_name": "Macbook",
+"product_price": 750000
+},
+{
+"id":"ab04",
+"product_category":"clothing & accessories",
+"product_desc": "Earrings made with 18K gold",
+"product_name": "Gold earrings",
+"product_price": 15000
+},
+{
+"id":"ab05",
+"product_category": "electronics",
+"product_desc": "headphones by sony w noise cancelling feature",
+"product_name":"headphones",
+"product_price": 5000
+},
+{
+"id":"ab06",
+"product_category": "groceries",
+"product_desc": "spanish tomato tango by lays",
+"product_name": "chips",
+"product_price": 20},
+
+{"id":"ab07",
+"product_category": "groceries",
+"product_desc": "amul dark chocolate with 100% pure cocoa",
+"product_name": "chocolates",
+"product_price": 150
+},
+
+{
+    "id":"ab08",
+    "product_category":"clothing & accessories",
+"product_desc": "dark blue denim pants by Levis",
+"product_name":"jeans",
+"product_price": 4000
+},
+{
+"id":"ab09",
+"product_category": "stationery",
+"product_desc":"blue-inked pens by Muji",
+"product_name": "pen",
+"product_price":100
+},
+{
+"id":"ab10",
+"product_category": "stationery",
+"product_desc":"yellow colored sticky notes by 3M",
+"product_name":"post-its ",
+"product_price":50}
+    ]}

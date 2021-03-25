@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-analytics.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <!--<link rel="preconnect" href="https://fonts.gstatic.com"> -->
+    <!--<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
-    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type ="text/javascript" src = "index.js" ></script>
+    <script type ="text/javascript" src = "index.js" ></script>
     <title>Web-app</title>
 </head>
 <body>
@@ -40,15 +45,13 @@
         <button type="button" onclick="getdata();">Get</button>-->
     <div class = "data" id= "main-data">
         <div class = "items">
-            <table>
-                <tbody id="content">
-            <h3>Product details:</h3>            
-            <p id= "category">Product category:</p>
-            <p id = "description">Product description:</p>
-            <p id = "name">Product name:</p>
-            <p id= "price">Product price:</p>
-                </tbody>
-            </table>
+           <h3>Product details:</h3>
+            <ul id = 'list'>
+            <li id= "category"></li>
+            <li id = "description"></li>
+            <li id = "name"></li>
+            <li id= "price"></li>
+            </ul>
         </div>
 
     </div>
@@ -63,31 +66,6 @@
     </div>
 </div>
 </div>
-
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-analytics.js"></script>
-
-<script>
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  var firebaseConfig = {
-    apiKey: "AIzaSyAqhMOuHEhA6CjxmYL9STf8_xhXSj3RIak",
-    authDomain: "qrcode-sam.firebaseapp.com",
-    databaseURL: "https://qrcode-sam-default-rtdb.firebaseio.com",
-    projectId: "qrcode-sam",
-    storageBucket: "qrcode-sam.appspot.com",
-    messagingSenderId: "778655685266",
-    appId: "1:778655685266:web:e1659e7812b531ec11a44b",
-    measurementId: "G-83GQBEE0PH"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-</script>
 
 </body>
 </html>
